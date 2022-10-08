@@ -1,15 +1,27 @@
-En este desafío tienes un array de números, usando la función map debes retornar todos los números del array multiplicados por dos.
+En este desafío tienes un array de objetos que representan datos de personas con los siguientes atributos:
 
-La solución debería tener un input y output como los siguientes:
+name
+lastName
+age
+
+El reto aquí es retornar un array de strings con los nombres, la solución debería tener un input y output como los siguientes:
 
 Input
 
-```js
-solution([2, 4, 5, 6, 8]);
-```
+solution([
+  {
+    name: 'Nicolas',
+    lastName: 'Molina',
+    age: 28
+  },
+  {
+    name: 'Valentina',
+    lastName: 'Molina',
+    age: 19
+  },
+  ...
+]);
 
 Output
 
-```sh
-[4,8,10,12, 16]
-```
+['Nicolas', 'Valentina']
