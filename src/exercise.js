@@ -1,3 +1,4 @@
-export function runCode(arrayA, arrayB) {
+export function runCode(array) {
   // Tu código aquí 👈
+
 }

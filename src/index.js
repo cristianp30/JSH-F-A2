@@ -2,15 +2,28 @@ import "./styles.css";
 import { runCode } from "./exercise";
 
 (() => {
-  const arrayA = [1, 2, 3, 4];
-  const arrayB = [5, 6, 7, 8];
-  const rta = runCode(arrayA, arrayB);
-
+  const array = [
+    {
+    name: 'Nicolas',
+    lastName: 'Molina',
+    age: 28
+  },
+  {
+    name: 'Valentina',
+    lastName: 'Molina',
+    age: 19
+  }
+];
+  
   document.getElementById("app").innerHTML = `
-  <h1>Title</h1>
-  <p>Array A: <code>${arrayA}</code></p>
-  <p>Array B: <code>${arrayB}</code></p>
-  <p>Response from <code>runCode</code>
-  <pre><code>${rta}</code></pre>
+  <h1>transformar un array</h1>
+  <p>Array: <code>${JSON.stringify(array)}}</code></p>
+  <p>Response from <code>runCode</code></p>
+  <p><button id ="button" >Run Code</button></p>
+  <pre><code id="rta"></code></pre>
   `;
+  document.getElementById("button").addEventListener("click", () =>{
+    const rta = runCode(array);
+    document.getElementById("rta").innerHTML=rta;
+  });
 })();
